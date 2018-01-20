@@ -2,7 +2,7 @@
 #include "PathPlanner.h"
 
 int main() {
-    Mat img = imread("/home/anirban/programming/Clion_Projects/task/Planning/aa.png", CV_LOAD_IMAGE_COLOR);
+    Mat img = imread("/home/anirban/programming/vision/data/Planning/aa.png", CV_LOAD_IMAGE_COLOR);
     if(!img.data) {
         cout<<" Unable to load Image" <<endl;
         return -1;
@@ -16,11 +16,11 @@ int main() {
     for(point& p : path)
         circle(img, Point(p.x, p.y), 1, Scalar(255, 0, 0), 1, CV_FILLED);
     cout << "The number of points traversed: " << obj.pointsTraversed << endl;
-    namedWindow("Original", CV_WINDOW_NORMAL);
-    namedWindow("Path", CV_WINDOW_NORMAL);
+    namedWindow("Original", CV_WINDOW_AUTOSIZE);
+    namedWindow("Path", CV_WINDOW_AUTOSIZE);
     imshow("Original", original);
     imshow("Path", img);
-    waitKey(0);
+    waitKey(2000); 
     destroyAllWindows();
     return 0;
 }
