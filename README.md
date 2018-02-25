@@ -1,1 +1,1 @@
-This is an implementation of the astar algorithm used to find the shortest path between the souce and destination.
+This is an implementation of the **astar algorithm** used to find the shortest path between the souce and destination.

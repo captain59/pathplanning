@@ -2,7 +2,7 @@
 #include "PathPlanner.h"
 
 int main() {
-    Mat img = imread("/home/anirban/programming/vision/data/Planning/aa.png", CV_LOAD_IMAGE_COLOR);
+    Mat img = imread("../../data/aa.png", CV_LOAD_IMAGE_COLOR);
     if(!img.data) {
         cout<<" Unable to load Image" <<endl;
         return -1;
@@ -20,7 +20,7 @@ int main() {
     namedWindow("Path", CV_WINDOW_AUTOSIZE);
     imshow("Original", original);
     imshow("Path", img);
-    waitKey(2000); 
+    waitKey(0); 
     destroyAllWindows();
     return 0;
 }

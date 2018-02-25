@@ -87,7 +87,7 @@ vector<point> PathPlanner::getPath() {
                 }
             } else {
                 // Either manhattan or eucledian
-                string distance = "eucledian";
+                string distance = "manhattan";
                 grid[ptn.y][ptn.x].g = current.g + (ptn.x == current.pt.x || ptn.y == current.pt.y)? 1.0 : sqrt(2);
                 grid[ptn.y][ptn.x].h = heuristic(ptn, distance);
                 grid[ptn.y][ptn.x].parent = current.pt;
