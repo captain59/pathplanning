@@ -1,1 +1,9 @@
-.vscode/
+# Compiled Source #
+###################
+*.out
+*.pyc
+*~
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
